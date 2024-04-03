@@ -1,0 +1,56 @@
+.task {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: .25rem;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--completed {
+        text-decoration: line-through;
+        opacity: .5;
+    }
+
+    &__content {
+        .content {
+            &__title {
+                font-weight: bold;
+                font-size: 1.15rem;
+                margin-bottom: .25rem;
+            }
+        
+            &__desc {
+                font-size: .8rem;
+                color: #6a6a6a;
+            }
+        }
+    }
+
+    &__icon {
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &--loading {
+                animation: spin 2s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

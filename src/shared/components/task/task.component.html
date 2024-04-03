@@ -1,0 +1,16 @@
+<div class="task" (click)="toggle()" [class]="{'task--completed': data.completed}">
+    <div class="task__content">
+        <div class="content__title">{{ data.title }}</div>
+        <div class="content__desc">{{ data.description }}</div>
+    </div>
+
+    <div class="task__icon">
+        @if (this.loading) {
+            <img src="./assets/loading.png" class="icon icon--loading" alt="loading">
+        } 
+        
+        @if (!this.loading && this.data.completed) {
+            <img src="./assets/check-mark.png" class="icon" alt="task completed">
+        }
+    </div>
+</div>
